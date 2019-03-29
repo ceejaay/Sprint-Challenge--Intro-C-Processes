@@ -19,18 +19,10 @@ char *concat(char *s1, char *s2)
 int main(int argc, char **argv)
 {
 
-  /* printf("arg c: %d\n", argc); */
-  /* char *thingy = concat("hello", "world"); */
-  /* printf("concat result %s\n", thingy); */
-  /* free(thingy); */
-
-
   DIR *d;
-  /* char *address[128]; */
   struct dirent *dir;
-  /* char thing; */
   struct stat buf;
-  /* printf("args %s\n", argv[2]); */
+  /* printf("arg 1 %s\n", argv[1]); */
 
 
   /* d = opendir("."); */
@@ -42,20 +34,20 @@ int main(int argc, char **argv)
   /* } */
   /* stat(".", &buf); */
   /* printf("size of file my prog => %lld\n",  buf.st_size); */
-
-  if(argv[1])
+  /* printf("checking for argv"); */
+  if(argv[1] == NULL)
   {
-    d = opendir(argv[1]);
-    /* char address[] = argv[1]; */
+    /* printf("here"); */
+    d = opendir(".");
   } else
 
   {
-    printf("here");
-    d = opendir(".");
+    d = opendir(argv[1]);
+    /* printf("Arg 0 => %s Arg 1 =>", argv[0], argv[1]); */
   }
 
   /* dir = readdir(d); */
-  /* printf("directory name: %s", dir->d_name); */
+  /* printf("directory name: %s\n", dir->d_name); */
   /* printf("argv: %s\n", argv[1]); */
   /* printf("D value => %d\n", d == '\0'); */
 
@@ -81,14 +73,5 @@ int main(int argc, char **argv)
     }
     closedir(d);
   }
-
-  // Parse command line
-
-  // Open directory
-
-  // Repeatly read and print entries
-
-  // Close directory
-
   return 0;
 }
