@@ -10,6 +10,7 @@ char *concat(char *s1, char *s2)
 {
   char *result = malloc(strlen(s1) + strlen(s2) + 1);
   strcpy(result, s1);
+  strcat(result, "/");
   /* printf(" inside concat: %s\n", result); */
   strcat(result, s2);
   return result;
@@ -18,7 +19,7 @@ char *concat(char *s1, char *s2)
 int main(int argc, char **argv)
 {
 
-  printf("arg c: %d\n", argc);
+  /* printf("arg c: %d\n", argc); */
   /* char *thingy = concat("hello", "world"); */
   /* printf("concat result %s\n", thingy); */
   /* free(thingy); */
@@ -55,9 +56,6 @@ int main(int argc, char **argv)
 
   /* dir = readdir(d); */
   /* printf("directory name: %s", dir->d_name); */
-
-
-
   /* printf("argv: %s\n", argv[1]); */
   /* printf("D value => %d\n", d == '\0'); */
 
