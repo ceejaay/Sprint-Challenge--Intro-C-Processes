@@ -9,7 +9,7 @@
   When it's time for execution the process goes into the running state. The process is executed by the CPU.
 
 4. Waiting
-  If a process cannot be completed temporaily, It will be set to waiting. It gets put to the side while other processes run. After the process is done waiting it can be moved back to running.
+  If a process cannot be completed temporarily, It will be set to waiting. It gets put to the side while other processes run. After the process is done waiting it can be moved back to running.
 
 5. Terminated
   A process can complete it's work then it's done. It terminates itself. Otherwise it may be killed by the user. If it's parent is terminated it may become a zombie process. 
@@ -28,4 +28,4 @@ A zombie process who lost it's parent will be adopted by the Process 1. Processe
 
 **4. What are some of the benefits of working in a compiled language versus a non-compiled language? More specifically, what benefits are there to be had from taking the extra time to compile our code?**
 
-When a programmer compiles code once, it's never compiled again. So when the user runs the program, it's ready to go. By contrast, a non-compliled language is translated into a version more useful to the computer at run-time. Compiled languages tend to be faster and more effecient. This means a programmer takes extra time at the development stage. A compiled language is more useful across platforms. Wereas a non-compliled languages may need extra software to run on various systems.
+When a programmer compiles code once, it's never compiled again. So when the user runs the program, it's ready to go. By contrast, a non-compiled language is translated into a version more useful to the computer at run-time. Compiled languages tend to be faster and more efficient. This means a programmer takes extra time at the development stage. A compiled language is more useful across platforms. Whereas a non-compiled languages may need extra software to run on various systems.
