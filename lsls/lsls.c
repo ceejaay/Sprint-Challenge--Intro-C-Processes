@@ -23,8 +23,6 @@ int main(int argc, char **argv)
   struct dirent *dir;
   struct stat buf;
   /* printf("arg 1 %s\n", argv[1]); */
-
-
   /* d = opendir("."); */
   /* int length = 0; */
   /* while(argv[length] != '\0') */
@@ -35,23 +33,25 @@ int main(int argc, char **argv)
   /* stat(".", &buf); */
   /* printf("size of file my prog => %lld\n",  buf.st_size); */
   /* printf("checking for argv"); */
-  if(argv[1] == NULL)
+  if(argc >= 1)
   {
+    printf("Arg 0 => %s Arg 1 => %s\n", argv[0], argv[1]);
+    d = opendir(argv[1]);
     /* printf("here"); */
-    d = opendir(".");
   } else
 
   {
-    d = opendir(argv[1]);
-    /* printf("Arg 0 => %s Arg 1 =>", argv[0], argv[1]); */
+    d = opendir(".");
+    printf("Arg 0 => %s Arg 1 => %s\n", argv[0], argv[1]);
   }
+
 
   /* dir = readdir(d); */
   /* printf("directory name: %s\n", dir->d_name); */
   /* printf("argv: %s\n", argv[1]); */
   /* printf("D value => %d\n", d == '\0'); */
 
-  /* d = opendir(argv[1]); */
+  /* d = opendir("."); */
   /* thing = readdir(d); */
 
 
@@ -62,6 +62,7 @@ int main(int argc, char **argv)
     fprintf(stderr, "No such directory\n");
     exit(1);
   } else {
+    printf("Starting while loop");
     while((dir = readdir(d)) != NULL)
     {
       /* if arg 1 == . or .. skip it */
