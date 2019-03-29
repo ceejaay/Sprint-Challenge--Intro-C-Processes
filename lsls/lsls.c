@@ -6,15 +6,6 @@
  * Main
  */
 
-/* char *concat(char *s1, char *s2) */
-/* { */
-/*   char *result = malloc(strlen(s1) + strlen(s2) + 1); */
-/*   strcpy(result, s1); */
-/*   strcat(result, "/"); */
-/*   /1* printf(" inside concat: %s\n", result); *1/ */
-/*   strcat(result, s2); */
-/*   return result; */
-/* } */
 
 int main(int argc, char **argv)
 {
@@ -39,19 +30,11 @@ int main(int argc, char **argv)
   };
 
 
-  /* printf("concatted things => %s", strcat(argv[1], "/")); */
-    /* printf(" This is just before checking for null on d. \n If no Arg 1 => %s Arg 1 => %s\n", argv[0], argv[1]); */
-    /* printf("is this null before checking? %d\n", d == NULL); */
   if (d == NULL)
   {
-    /* really we need an error here */
     fprintf(stderr, "No such directory\n");
     exit(1);
   } else {
-    /* printf(" This is before while loop.  \n If no Arg 1 => %s Arg 1 => %s\n", argv[0], argv[1]); */
-    /* printf("is this null? %d\n", d == NULL); */
-    /* printf("Starting while loop"); */
-    /* printf("Address: %s\n", address); */
     while((dir = readdir(d)) != NULL)
     {
       /* printf("path %s\n", address); */
